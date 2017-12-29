@@ -57,7 +57,7 @@
 
     ```java
     //HuffMan树节点类
-    public class HuffmanNode implements Comparable, Cloneable {
+      public class HuffmanNode implements Comparable, Cloneable {
         protected int key;              // 权值
         protected HuffmanNode left;     // 左孩子
         protected HuffmanNode right;    // 右孩子
@@ -70,8 +70,8 @@
              this.right = right;
              this.parent = parent;
         }
-   }
-   ```
+      }
+    ```
 
 ### 三、实验目标
 
