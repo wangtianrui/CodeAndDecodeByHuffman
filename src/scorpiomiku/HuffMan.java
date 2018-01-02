@@ -7,7 +7,7 @@ import java.util.Set;
 
 //HuffMan工厂
 public abstract class HuffMan implements HuffManMainWays {
-    //因为我们除了字符串的还要做图片压缩和解压，所以构造树这个环节可能不一样，所以写成抽象方法
+    //构造树的抽象方法
     protected abstract Node createTree(ArrayList<Node> nodeList);
 
     //把字符串转换为Node的一个线性结构
