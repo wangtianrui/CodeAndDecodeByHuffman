@@ -1,7 +1,9 @@
 package scorpiomiku;
 
 import java.util.Map;
-
+/*
+* 用来存放解码用的MAP，和码
+*/
 public class MapOfEncode {
     private String encodeString;
     private Map<Character, String> encodeMap;

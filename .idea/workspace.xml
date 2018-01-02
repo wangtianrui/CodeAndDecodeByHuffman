@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f3db58f-bdce-468a-8732-ef04fe15d485" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeAndDecodeByHuffman/scorpiomiku/HuffMan.class" afterPath="$PROJECT_DIR$/out/production/CodeAndDecodeByHuffman/scorpiomiku/HuffMan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeAndDecodeByHuffman/scorpiomiku/HuffManTest.class" afterPath="$PROJECT_DIR$/out/production/CodeAndDecodeByHuffman/scorpiomiku/HuffManTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeAndDecodeByHuffman/scorpiomiku/main.class" afterPath="$PROJECT_DIR$/out/production/CodeAndDecodeByHuffman/scorpiomiku/main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scorpiomiku/Data.java" afterPath="$PROJECT_DIR$/src/scorpiomiku/Data.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scorpiomiku/HuffMan.java" afterPath="$PROJECT_DIR$/src/scorpiomiku/HuffMan.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scorpiomiku/HuffManTest.java" afterPath="$PROJECT_DIR$/src/scorpiomiku/HuffManTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scorpiomiku/main.java" afterPath="$PROJECT_DIR$/src/scorpiomiku/main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scorpiomiku/MapOfEncode.java" afterPath="$PROJECT_DIR$/src/scorpiomiku/MapOfEncode.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +21,8 @@
       <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scorpiomiku/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state relative-caret-position="162">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding>
                 <element signature="e#486#487#0" expanded="true" />
                 <element signature="e#519#520#0" expanded="true" />
@@ -37,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/src/scorpiomiku/MapOfEncode.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="8" column="66" lean-forward="false" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
+              <caret line="8" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -46,18 +44,20 @@
       <file leaf-file-name="HuffManTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scorpiomiku/HuffManTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="32" column="9" lean-forward="false" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="297">
+              <caret line="41" column="19" lean-forward="false" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scorpiomiku/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="64" lean-forward="false" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
+            <state relative-caret-position="162">
+              <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -66,21 +66,21 @@
       <file leaf-file-name="HuffManMainWays.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scorpiomiku/HuffManMainWays.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            <state relative-caret-position="135">
+              <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HuffMan.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HuffMan.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scorpiomiku/HuffMan.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="55" column="16" lean-forward="true" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+            <state relative-caret-position="270">
+              <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1489#1508#0" expanded="true" />
+                <element signature="e#578#597#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,8 +100,10 @@
         <entry file="file://$PROJECT_DIR$/src/scorpiomiku/Data.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="377">
-              <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-              <folding />
+              <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+              <folding>
+                <element signature="e#462#463#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -132,12 +134,12 @@
         <option value="$PROJECT_DIR$/src/scorpiomiku/HuffmanAlgorithmImpl2.java" />
         <option value="$PROJECT_DIR$/src/scorpiomiku/Node.java" />
         <option value="$PROJECT_DIR$/src/scorpiomiku/HuffManMainWays.java" />
-        <option value="$PROJECT_DIR$/src/scorpiomiku/MapOfEncode.java" />
         <option value="$PROJECT_DIR$/src/scorpiomiku/HaffNode.java" />
-        <option value="$PROJECT_DIR$/src/scorpiomiku/Data.java" />
-        <option value="$PROJECT_DIR$/src/scorpiomiku/HuffManTest.java" />
         <option value="$PROJECT_DIR$/src/scorpiomiku/main.java" />
+        <option value="$PROJECT_DIR$/src/scorpiomiku/Data.java" />
+        <option value="$PROJECT_DIR$/src/scorpiomiku/MapOfEncode.java" />
         <option value="$PROJECT_DIR$/src/scorpiomiku/HuffMan.java" />
+        <option value="$PROJECT_DIR$/src/scorpiomiku/HuffManTest.java" />
       </list>
     </option>
   </component>
@@ -369,9 +371,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15085287" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -420,7 +422,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -452,7 +456,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#462#463#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -462,7 +468,7 @@
           <caret line="40" column="47" lean-forward="false" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1489#1508#0" expanded="true" />
+            <element signature="e#578#597#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -496,18 +502,10 @@
     <entry file="file://$PROJECT_DIR$/src/scorpiomiku/Demo.java" />
     <entry file="file://$PROJECT_DIR$/src/scorpiomiku/Haffman.java" />
     <entry file="file://$PROJECT_DIR$/src/scorpiomiku/HaffNode.java" />
-    <entry file="file://$PROJECT_DIR$/src/scorpiomiku/MapOfEncode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="66" lean-forward="false" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scorpiomiku/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        <state relative-caret-position="162">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="e#486#487#0" expanded="true" />
             <element signature="e#519#520#0" expanded="true" />
@@ -515,46 +513,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/scorpiomiku/Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <element signature="e#462#463#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/scorpiomiku/HuffManMainWays.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state relative-caret-position="135">
+          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scorpiomiku/Data.java">
+    <entry file="file://$PROJECT_DIR$/src/scorpiomiku/MapOfEncode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+        <state relative-caret-position="216">
+          <caret line="8" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scorpiomiku/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scorpiomiku/HuffManTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="32" column="9" lean-forward="false" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="297">
+          <caret line="41" column="19" lean-forward="false" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scorpiomiku/HuffMan.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="55" column="16" lean-forward="true" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+        <state relative-caret-position="270">
+          <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1489#1508#0" expanded="true" />
+            <element signature="e#578#597#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scorpiomiku/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="64" lean-forward="false" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>

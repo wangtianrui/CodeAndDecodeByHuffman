@@ -1,6 +1,9 @@
 package scorpiomiku;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 public class HuffManTest extends HuffMan {
     @Override
@@ -33,6 +36,34 @@ public class HuffManTest extends HuffMan {
        // System.out.println("以下是前序:");
         //testShowTree(test);
         return rootNode;
+    }
+
+    @Override
+    protected ArrayList<Node> string2NodeList(String string) {
+        ArrayList<Node> nodeList = new ArrayList<>();
+        Map<Character, Integer> codeMap = new HashMap<>();
+        for (int i = 0; i < string.length(); i++) {
+            Character character = string.charAt(i);
+            if (!codeMap.keySet().contains(character)) {
+                //System.out.println("map 里没有   "+character+"   放入了");
+                codeMap.put(character, 1);
+            } else {
+                Integer oldValue = codeMap.get(character);
+                codeMap.put(character, oldValue + 1);
+                //System.out.println("map 里有   "+character+"   加一了");
+            }
+        }
+        Set<Character> charactersInMap = codeMap.keySet();
+        for (Character key : charactersInMap) {
+            Node node = new Node();
+            Data data = new Data();
+            data.setC(key);
+            data.setFrequency(codeMap.get(key));
+            node.setData(data);
+            nodeList.add(node);
+            //System.out.println(data.getC() + "被加到了List里，次数为:"+data.getFrequency());
+        }
+        return nodeList;
     }
 
 
