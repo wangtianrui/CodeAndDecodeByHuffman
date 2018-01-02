@@ -15,10 +15,12 @@ public abstract class HuffMan implements HuffManMainWays {
         for (int i = 0; i < string.length(); i++) {
             Character character = string.charAt(i);
             if (!codeMap.keySet().contains(character)) {
+                //System.out.println("map 里没有   "+character+"   放入了");
                 codeMap.put(character, 1);
             } else {
                 Integer oldValue = codeMap.get(character);
                 codeMap.put(character, oldValue + 1);
+                //System.out.println("map 里有   "+character+"   加一了");
             }
         }
         Set<Character> charactersInMap = codeMap.keySet();
@@ -29,28 +31,32 @@ public abstract class HuffMan implements HuffManMainWays {
             data.setFrequency(codeMap.get(key));
             node.setData(data);
             nodeList.add(node);
+            //System.out.println(data.getC() + "被加到了List里，次数为:"+data.getFrequency());
         }
         return nodeList;
     }
 
-    private Map<Character, String> getCode(Node rootNode) {
+    private Map<Character, String> getCodeMap(Node rootNode) {
         Map<Character, String> codesMap = new HashMap<Character, String>();
         if (rootNode.getLeftChild() == null && rootNode.getRightChild() == null) {
-            codesMap.put(rootNode.getData().getC(), "1");
+            codesMap.put(rootNode.getData().getC(), "0");
+            System.out.println(rootNode.getData().getC() + "的编码为:"+codesMap.get(rootNode.getData().getC()));
             return codesMap;
         }
-        getCode(rootNode, "", codesMap);
+        getCodeMap(rootNode, "", codesMap);
         return codesMap;
     }
 
-    private void getCode(Node rootNode, String suffix, Map<Character, String> codesMap) {
+    private void getCodeMap(Node rootNode, String suffix, Map<Character, String> codesMap) {
         if (rootNode != null) {
+            //System.out.println("当前node为:"+rootNode.getData().getC());
             if (rootNode.getLeftChild() == null && rootNode.getRightChild() == null) {
                 Character character = rootNode.getData().getC();
                 codesMap.put(character, suffix);
+                System.out.println(character+"被放进了Map,编码为:"+suffix);
             }
-            getCode(rootNode.getLeftChild(), suffix + "0", codesMap);
-            getCode(rootNode.getRightChild(), suffix + "1", codesMap);
+            getCodeMap(rootNode.getLeftChild(), suffix + "0", codesMap);
+            getCodeMap(rootNode.getRightChild(), suffix + "1", codesMap);
         }
     }
 
@@ -58,7 +64,7 @@ public abstract class HuffMan implements HuffManMainWays {
     public MapOfEncode encode(String string) {
         ArrayList<Node> nodeArrayList = string2NodeList(string);
         Node rootNode = createTree(nodeArrayList);
-        Map<Character, String> codeMap = getCode(rootNode);
+        Map<Character, String> codeMap = getCodeMap(rootNode);
         MapOfEncode mapOfEncode = encode(codeMap, string);
         return mapOfEncode;
     }

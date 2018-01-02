@@ -8,11 +8,19 @@ public class HuffManTest extends HuffMan {
         init(nodeList);
         while (nodeList.size() != 1) {
             int size = nodeList.size();
+            /*
+            for (int k = 0; k < size; k++) {
+                System.out.println("create tree test:" + nodeList.get(k).toString() + "   size = " + size);
+            }*/
             Node nodeLeft = nodeList.get(size - 1);
             Node nodeRight = nodeList.get(size - 2);
+            /*
+            System.out.println("左子："+nodeLeft.toString());
+            System.out.println("右子："+nodeRight.toString());
+            */
             Node nodeParent = new Node();
             nodeParent.setLeftChild(nodeLeft);
-            nodeRight.setRightChild(nodeRight);
+            nodeParent.setRightChild(nodeRight);
             Data data = new Data();
             data.setFrequency(nodeRight.getData().getFrequency() + nodeLeft.getData().getFrequency());
             nodeParent.setData(data);
@@ -21,7 +29,20 @@ public class HuffManTest extends HuffMan {
             sort(nodeList);
         }
         Node rootNode = nodeList.get(0);
+        Node test = rootNode;
+       // System.out.println("以下是前序:");
+        //testShowTree(test);
         return rootNode;
+    }
+
+
+    private void testShowTree(Node root) {
+
+        if (root != null) {
+            System.out.println(root.getData().getC());
+            testShowTree(root.getLeftChild());
+            testShowTree(root.getRightChild());
+        }
     }
 
     private void init(ArrayList<Node> nodeList) {

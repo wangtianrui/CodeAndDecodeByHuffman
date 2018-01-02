@@ -22,7 +22,7 @@ public class Data implements Comparable<Data> {
 
     @Override
     public String toString() {
-        return c + "  出现的次数是:  " + frequency;
+        return c + " " ;
     }
 
     @Override
