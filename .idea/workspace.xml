@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f3db58f-bdce-468a-8732-ef04fe15d485" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scorpiomiku/EncodeActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scorpiomiku/SceneWarning.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/CodeAndDecodeByHuffman/scorpiomiku/MainActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/CodeAndDecodeByHuffman/scorpiomiku/MainActivity$2.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeAndDecodeByHuffman/scorpiomiku/IOTools.class" afterPath="$PROJECT_DIR$/out/production/CodeAndDecodeByHuffman/scorpiomiku/IOTools.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeAndDecodeByHuffman/scorpiomiku/MainActivity.class" afterPath="$PROJECT_DIR$/out/production/CodeAndDecodeByHuffman/scorpiomiku/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeAndDecodeByHuffman/scorpiomiku/main.class" afterPath="$PROJECT_DIR$/out/production/CodeAndDecodeByHuffman/scorpiomiku/main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scorpiomiku/IOTools.java" afterPath="$PROJECT_DIR$/src/scorpiomiku/IOTools.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scorpiomiku/Main.java" afterPath="$PROJECT_DIR$/src/scorpiomiku/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scorpiomiku/MainActivity.java" afterPath="$PROJECT_DIR$/src/scorpiomiku/MainActivity.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/CodeAndDecodeByHuffman/scorpiomiku/EncodeActivity.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scorpiomiku/CodeActivity.java" afterPath="$PROJECT_DIR$/src/scorpiomiku/CodeActivity.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -74,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/src/scorpiomiku/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="249">
-              <caret line="45" column="56" lean-forward="false" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
+              <caret line="45" column="52" lean-forward="false" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,13 +82,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EncodeActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/scorpiomiku/EncodeActivity.java">
+      <file leaf-file-name="CodeActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/scorpiomiku/CodeActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="58" column="43" lean-forward="false" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+            <state relative-caret-position="350">
+              <caret line="124" column="8" lean-forward="false" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#974#1526#0" expanded="false" />
+                <element signature="e#1562#1642#0" expanded="false" />
+                <element signature="e#1677#1756#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -192,12 +185,13 @@
         <option value="$PROJECT_DIR$/src/scorpiomiku/SceneMain.java" />
         <option value="$PROJECT_DIR$/src/scorpiomiku/SceneWarning.java" />
         <option value="$PROJECT_DIR$/src/scorpiomiku/EncodeActivity.java" />
+        <option value="$PROJECT_DIR$/src/scorpiomiku/CodeActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="1432" />
+    <option name="y" value="-149" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -277,7 +271,7 @@
     <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="scorpiomiku.EncodeActivity" />
+          <option name="PATTERN" value="scorpiomiku.CodeActivity" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -296,7 +290,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="scorpiomiku.EncodeActivity" />
+          <option name="PATTERN" value="scorpiomiku.CodeActivity" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -315,7 +309,7 @@
     <configuration name="MainActivity" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="scorpiomiku.EncodeActivity" />
+          <option name="PATTERN" value="scorpiomiku.CodeActivity" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -439,7 +433,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1432" y="-149" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -449,7 +444,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -499,8 +494,8 @@
         <state relative-caret-position="405">
           <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding>
-            <element signature="e#486#487#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
+            <element signature="e#486#487#0" expanded="false" />
+            <element signature="e#519#520#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -619,8 +614,8 @@
         <state relative-caret-position="405">
           <caret line="23" column="19" lean-forward="false" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
           <folding>
-            <element signature="e#486#487#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
+            <element signature="e#486#487#0" expanded="false" />
+            <element signature="e#519#520#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -662,7 +657,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scorpiomiku/SwingComponent.class" />
     <entry file="file://$PROJECT_DIR$/src/scorpiomiku/test.java" />
-    <entry file="file://$PROJECT_DIR$/src/scorpiomiku/EncodeActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/scorpiomiku/CodeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
@@ -727,19 +722,22 @@
     <entry file="file://$PROJECT_DIR$/src/scorpiomiku/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
-          <caret line="45" column="56" lean-forward="false" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
+          <caret line="45" column="52" lean-forward="false" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scorpiomiku/EncodeActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/scorpiomiku/CodeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="58" column="43" lean-forward="false" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+        <state relative-caret-position="350">
+          <caret line="124" column="8" lean-forward="false" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#974#1526#0" expanded="false" />
+            <element signature="e#1562#1642#0" expanded="false" />
+            <element signature="e#1677#1756#0" expanded="false" />
           </folding>
         </state>
       </provider>

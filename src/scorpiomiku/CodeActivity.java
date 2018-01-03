@@ -15,22 +15,22 @@ import java.io.IOException;
 
 public class CodeActivity {
 
-    private Stage main = new Stage();
-    private Button start = new Button("开始");
-    private Button input = new Button("...");
-    private Button output = new Button("...");
-    private Button Exit = new Button("退出");
-    private Button Back = new Button("返回首页");
-    private Text inputfile;
-    private Text outputpath;
-    private TextField inputField = new TextField();
-    private TextField outputFeild = new TextField();
+    private Stage main_layout = new Stage();
+    private Button startButton = new Button("开始");
+    private Button firstFileButton = new Button("...");
+    private Button secondFileButton = new Button("...");
+    private Button exitButton = new Button("退出");
+    private Button backButton = new Button("返回首页");
+    private Text firstFileText;
+    private Text secondFileText;
+    private TextField firstTextField = new TextField();
+    private TextField secondTextField = new TextField();
 
 
     CodeActivity(int selection, Stage begin) throws IOException {
 
 
-        output.setOnAction(event -> {
+        secondFileButton.setOnAction(event -> {
             //JFileChooser可以用来浏览文件夹
             JFileChooser fileChooser = new JFileChooser();
             //只能选择一个
@@ -39,92 +39,92 @@ public class CodeActivity {
             if (flag == JFileChooser.APPROVE_OPTION) {
                 File file = fileChooser.getSelectedFile();
                 //getAbsolutePath()返回的是user.dir+getPath()的内容,如：D:\\test\\test.txt
-                outputFeild.setText(file.getAbsolutePath());
+                secondTextField.setText(file.getAbsolutePath());
             }
         });
 
 
-        Exit.setOnAction(event -> {
-            main.close();
+        exitButton.setOnAction(event -> {
+            main_layout.close();
             begin.close();
         });
 
-        Back.setOnAction(event -> {
-            main.close();
+        backButton.setOnAction(event -> {
+            main_layout.close();
             begin.show();
         });
 
 
         if (selection == 2) {
-            this.inputfile = new Text("请选择要压缩的文件");
-            this.outputpath = new Text("请选择输出目录");
-            start.setOnAction(event -> {
-                System.out.println("压缩1" + this.outputFeild.getText().toString());
+            //selection==2时为encode界面
+            //文字
+            this.firstFileText = new Text("请选择要压缩的文件");
+            this.secondFileText = new Text("请选择输出目录");
+            //开始按钮点击事件
+            startButton.setOnAction(event -> {
+                System.out.println("压缩1" + this.secondTextField.getText().toString());
             });
-            input.setOnAction(event -> {
+            //浏览文件夹的按钮
+            firstFileButton.setOnAction(event -> {
                 JFileChooser fileChooser = new JFileChooser();
                 int flag = fileChooser.showOpenDialog(fileChooser);
                 if (flag == JFileChooser.APPROVE_OPTION) {
                     File file = fileChooser.getSelectedFile();
-                    inputField.setText(file.getAbsolutePath());
+                    firstTextField.setText(file.getAbsolutePath());
                 }
             });
         } else if (selection == 1) {
-            this.inputfile = new Text("请选择要解压的文件");
-            this.outputpath = new Text("请选择输出目录");
-            start.setOnAction(event -> {
-                System.out.println("解压");
+            //selection==1时为decode界面
+            //设置文字
+            this.firstFileText = new Text("请选择要解压的文件");
+            this.secondFileText = new Text("请选择输出目录");
 
+            //start按钮
+            startButton.setOnAction(event -> {
+                System.out.println("解压");
             });
-            input.setOnAction(event -> {
+
+            //文件浏览按钮
+            firstFileButton.setOnAction(event -> {
                 JFileChooser fileChooser = new JFileChooser();
                 int flag = fileChooser.showOpenDialog(fileChooser);
                 if (flag == JFileChooser.APPROVE_OPTION) {
                     File file = fileChooser.getSelectedFile();
-                    inputField.setText(file.getAbsolutePath());
-                }
-            });
-        } else if (selection == 0) {
-            this.inputfile = new Text("请选择要压缩的文件");
-            this.outputpath = new Text("请选择输出目录");
-            start.setOnAction(event -> {
-                System.out.println("压缩");
-            });
-            input.setOnAction(event -> {
-                JFileChooser fileChooser = new JFileChooser();
-                fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-                int flag = fileChooser.showOpenDialog(fileChooser);
-                if (flag == JFileChooser.APPROVE_OPTION) {
-                    File file = fileChooser.getSelectedFile();
-                    inputField.setText(file.getAbsolutePath());
+                    firstTextField.setText(file.getAbsolutePath());
                 }
             });
         }
-        HBox first = new HBox();
-        HBox second = new HBox();
-        HBox third = new HBox();
-        inputField.setPrefSize(200, 20);
-        outputFeild.setPrefSize(200, 20);
-        first.getChildren().addAll(inputfile, inputField, input);
-        first.setAlignment(Pos.CENTER);
-        first.setSpacing(30);
-        second.getChildren().addAll(outputpath, outputFeild, output);
-        second.setAlignment(Pos.CENTER);
-        second.setSpacing(30);
-        third.getChildren().addAll(start, Exit, Back);
-        third.setAlignment(Pos.CENTER);
-        third.setSpacing(100);
-        Exit.setPrefSize(80, 30);
-        start.setPrefSize(80, 30);
-        Back.setPrefSize(80, 30);
+
+        HBox firstHBox = new HBox();
+        HBox secondHBox = new HBox();
+        HBox thirdHBox = new HBox();
+        firstTextField.setPrefSize(200, 20);
+        secondTextField.setPrefSize(200, 20);
+        firstHBox.getChildren().addAll(firstFileText, firstTextField, firstFileButton);
+        firstHBox.setAlignment(Pos.CENTER);
+        firstHBox.setSpacing(25);
+
+        secondHBox.getChildren().addAll(secondFileText, secondTextField, secondFileButton);
+        secondHBox.setAlignment(Pos.CENTER);
+        secondHBox.setSpacing(30);
+
+        thirdHBox.getChildren().addAll(startButton, exitButton, backButton);
+        thirdHBox.setAlignment(Pos.CENTER);
+        thirdHBox.setSpacing(100);
+
+        exitButton.setPrefSize(80, 30);
+        startButton.setPrefSize(80, 30);
+        backButton.setPrefSize(80, 30);
+
         VBox all = new VBox();
-        all.getChildren().addAll(first, second, third);
+        all.getChildren().addAll(firstHBox, secondHBox, thirdHBox);
         all.setSpacing(100);
         all.setAlignment(Pos.CENTER);
         all.setPrefSize(600, 400);
         Scene scene = new Scene(all, 600, 400);
-        main.setScene(scene);
-        main.setTitle("基于HuffMan编码的压缩");
-        main.show();
+
+        main_layout.setScene(scene);
+        main_layout.setTitle("基于HuffMan编码的压缩");
+        main_layout.show();
     }
 }
