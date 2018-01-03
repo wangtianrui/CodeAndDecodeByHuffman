@@ -20,6 +20,19 @@ public class IOTools {
         return returnString;
     }
 
+    public static String getData(String fileName) throws IOException {
+        FileInputStream fis = new FileInputStream(fileName);
+        byte[] bbuf = new byte[1024];
+        int hasRead = 0;
+        String returnString = "";
+        while ((hasRead = fis.read(bbuf)) > 0) {
+            //加上gbk防止中文乱码
+            returnString = returnString + new String(bbuf, 0, hasRead);
+        }
+        System.out.println("成功读取到:" + returnString);
+        return returnString;
+    }
+
     public static void writeCode(String fileName, String code) throws IOException {
         FileWriter fw1 = new FileWriter(fileName);
         fw1.write(code);
@@ -77,13 +90,13 @@ public class IOTools {
         return returnMap;
     }
 
-    public static void getJPG(String filename){
+    public static void getJPG(String filename) {
         try {
             FileInputStream fisJPG = new FileInputStream(filename);
             byte[] read = new byte[1024];
-            int len = 0 ;
-            while((len=fisJPG.read(read))!=-1){
-                System.out.println( read.toString());
+            int len = 0;
+            while ((len = fisJPG.read(read)) != -1) {
+                System.out.println(read.toString());
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -91,5 +104,14 @@ public class IOTools {
             e.printStackTrace();
         }
 
+    }
+
+    public static void write(String string, String filename) {
+        try {
+            FileOutputStream fos = new FileOutputStream(filename);
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
