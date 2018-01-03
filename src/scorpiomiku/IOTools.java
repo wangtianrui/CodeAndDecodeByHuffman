@@ -62,12 +62,12 @@ public class IOTools {
 
         try {
             while ((mChar = br1.readLine()) != null) {
-               if ((mCode = br1.readLine()) != null) {
+                if ((mCode = br1.readLine()) != null) {
                     System.out.println(mChar + "编码为:" + mCode);
-                }else{
-                   mCode = br1.readLine();
-                   System.out.println(mChar + "编码为:" + mCode);
-               }
+                } else {
+                    mCode = br1.readLine();
+                    System.out.println(mChar + "编码为:" + mCode);
+                }
             }
             //System.out.println("1");
         } catch (IOException e) {
@@ -75,5 +75,21 @@ public class IOTools {
             //System.out.println(e.toString());
         }
         return returnMap;
+    }
+
+    public static void getJPG(String filename){
+        try {
+            FileInputStream fisJPG = new FileInputStream(filename);
+            byte[] read = new byte[1024];
+            int len = 0 ;
+            while((len=fisJPG.read(read))!=-1){
+                System.out.println( read.toString());
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }

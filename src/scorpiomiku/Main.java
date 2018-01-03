@@ -19,9 +19,11 @@ public class Main {
         IOTools.getCodeFromTxt("E:\\javaprogrames\\CodeAndDecodeByHuffman\\Code.txt");
         IOTools.getMapFromTxt("E:\\javaprogrames\\CodeAndDecodeByHuffman\\Map.txt");
         //System.out.println("完成");
-        */
+
         MainActivity mainActivity = new MainActivity();
-        mainActivity.init();
+        mainActivity.init();*/
+
+        IOTools.getJPG("E:\\javaprogrames\\CodeAndDecodeByHuffman\\testdog.jpg");
     }
 
 }

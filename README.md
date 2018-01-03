@@ -94,7 +94,7 @@ Huffman编码处理的是字符以及字符对应的二进制的编码配对问�
 
 > ###### 源码：最终源码打包为压缩包并上传到github
 
-[查看源码github点我](https://github.com/wangtianrui/CodeAndDecodeByHuffman)
+github地址:https://github.com/wangtianrui/CodeAndDecodeByHuffman
 
 ### 五、实验分工
 
