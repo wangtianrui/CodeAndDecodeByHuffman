@@ -62,7 +62,17 @@ public class CodeActivity {
             this.secondFileText = new Text("请选择输出目录");
             //开始按钮点击事件
             startButton.setOnAction(event -> {
-                System.out.println("压缩1" + this.secondTextField.getText().toString());
+                String readData = null;
+                try {
+                    readData = IOTools.getTxt(this.firstTextField.getText());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                HuffManTest huffManTest = new HuffManTest();
+                MapOfEncode mapOfEncode = huffManTest.encode(readData);
+                System.out.println(mapOfEncode.getEncodeString());
+//                String decode = huffManTest.decode(mapOfEncode);
+//                System.out.println(decode);
             });
             //浏览文件夹的按钮
             firstFileButton.setOnAction(event -> {
