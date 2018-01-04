@@ -27,10 +27,10 @@ public class MainActivity extends Application {
 
         Text holder = new Text(" ");
 
-        Text Welcome = new javafx.scene.text.Text("     您好，欢迎使用本压缩软件，" +
+        Text Welcome = new javafx.scene.text.Text("     您好，欢迎使用本编解码软件，" +
                 "请点击按钮选择您要执行的操作");
 
-        Button Compress1 = new Button("压缩文件");
+        Button Compress1 = new Button("编码文件");
         Compress1.setOnAction(event -> {
             try {
                 start.hide();
@@ -39,7 +39,7 @@ public class MainActivity extends Application {
 
             }
         });
-        Button DeCompress = new Button("解压");
+        Button DeCompress = new Button("解码");
         DeCompress.setOnAction(event -> {
             try {
                 start.hide();
@@ -80,7 +80,7 @@ public class MainActivity extends Application {
 
 
         start.setScene(scene);
-        start.setTitle("基于HuffMan编码的压缩");
+        start.setTitle("HuffMan编解码");
         start.show();
     }
 }

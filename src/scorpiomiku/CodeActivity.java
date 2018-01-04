@@ -15,6 +15,7 @@ import java.io.IOException;
 
 public class CodeActivity {
 
+    private FilePath mFilePath;
     private Stage main_layout = new Stage();
     private Button startButton = new Button("开始");
     private Button firstFileButton = new Button("...");
@@ -58,21 +59,19 @@ public class CodeActivity {
         if (selection == 2) {
             //selection==2时为encode界面
             //文字
-            this.firstFileText = new Text("请选择要压缩的文件");
+            this.firstFileText = new Text("请选择要编码的文件");
             this.secondFileText = new Text("请选择输出目录");
             //开始按钮点击事件
             startButton.setOnAction(event -> {
-                String readData = null;
-                try {
-                    readData = IOTools.getTxt(this.firstTextField.getText());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                HuffManTest huffManTest = new HuffManTest();
-                MapOfEncode mapOfEncode = huffManTest.encode(readData);
-                System.out.println(mapOfEncode.getEncodeString());
-//                String decode = huffManTest.decode(mapOfEncode);
-//                System.out.println(decode);
+                //IOTools.getFileName(firstTextField.getText().toString())
+                String inputFileName = firstTextField.getText().toString();
+                String outputCodeFileName = secondTextField.getText().toString()
+                        + IOTools.getFileName(firstTextField.getText().toString()) + ".dat";
+                String outputMapFileName = secondTextField.getText().toString()
+                        + IOTools.getFileName(firstTextField.getText().toString()) + "Map.txt";
+                mFilePath = new FilePath(inputFileName, outputCodeFileName, outputMapFileName);
+                //System.out.println(inputFileName + outputCodeFileName);
+                JOptionPane.showMessageDialog(null, "OK", "编码成功", JOptionPane.ERROR_MESSAGE);
             });
             //浏览文件夹的按钮
             firstFileButton.setOnAction(event -> {
@@ -86,12 +85,12 @@ public class CodeActivity {
         } else if (selection == 1) {
             //selection==1时为decode界面
             //设置文字
-            this.firstFileText = new Text("请选择要解压的文件");
+            this.firstFileText = new Text("请选择要解码的文件");
             this.secondFileText = new Text("请选择输出目录");
 
             //start按钮
             startButton.setOnAction(event -> {
-                System.out.println("解压");
+                System.out.println("解码");
             });
 
             //文件浏览按钮
@@ -134,7 +133,7 @@ public class CodeActivity {
         Scene scene = new Scene(all, 600, 400);
 
         main_layout.setScene(scene);
-        main_layout.setTitle("基于HuffMan编码的压缩");
+        main_layout.setTitle("HuffMan编解码");
         main_layout.show();
     }
 }

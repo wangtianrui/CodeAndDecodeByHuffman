@@ -1,12 +1,14 @@
 package scorpiomiku;
 
 
+import java.awt.*;
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
 public class IOTools {
+
     public static String getTxt(String fileName) throws IOException {
         FileInputStream fis = new FileInputStream(fileName);
         byte[] bbuf = new byte[1024];
@@ -20,25 +22,6 @@ public class IOTools {
         return returnString;
     }
 
-    public static String getData(String fileName) throws IOException {
-        FileInputStream fis = new FileInputStream(fileName);
-        byte[] bbuf = new byte[1024];
-        int hasRead = 0;
-        String returnString = "";
-        while ((hasRead = fis.read(bbuf)) > 0) {
-            //加上gbk防止中文乱码
-            returnString = returnString + new String(bbuf, 0, hasRead);
-        }
-        System.out.println("成功读取到:" + returnString);
-        return returnString;
-    }
-
-    public static void writeCode(String fileName, String code) throws IOException {
-        FileWriter fw1 = new FileWriter(fileName);
-        fw1.write(code);
-        fw1.close();
-    }
-
     public static void writeMap(String fileName, Map<Character, String> codeMap) throws IOException {
 
         FileWriter fw = new FileWriter(fileName);
@@ -48,21 +31,6 @@ public class IOTools {
             fw.write(codeMap.get(key) + "\n");
         }
         fw.close();
-
-        // BufferedWriter bw = new BufferedWriter();
-
-    }
-
-    public static String getCodeFromTxt(String fileName) throws IOException {
-        FileInputStream fis2 = new FileInputStream(fileName);
-        byte[] bbuf2 = new byte[1024];
-        int hasRead2 = 0;
-        String returnString2 = "";
-        while ((hasRead2 = fis2.read(bbuf2)) > 0) {
-            returnString2 = returnString2 + new String(bbuf2, 0, hasRead2);
-        }
-        System.out.println("成功读取到:" + returnString2);
-        return returnString2;
     }
 
     public static Map<Character, String> getMapFromTxt(String fileName) throws FileNotFoundException {
@@ -106,12 +74,47 @@ public class IOTools {
 
     }
 
-    public static void write(String string, String filename) {
+    public static String readCodeFromDat(String filename) {
+        String returnString = "";
+        FileInputStream fis = null;
         try {
-            FileOutputStream fos = new FileOutputStream(filename);
-
+            fis = new FileInputStream(filename);
+            byte[] temp = new byte[1024];
+            int len = 0;
+            while ((len = fis.read(temp)) != -1) {
+                returnString = returnString + new String(temp);
+            }
+            fis.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+        return returnString;
+    }
+
+    public static void writeCodeToDat(String string, String filename) {
+        FileOutputStream fos = null;
+        try {
+            fos = new FileOutputStream(filename);
+            fos.write(string.getBytes());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                fos.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static String getFileName(String string) {
+        String returnString = "";
+        String temp[] = string.split("\\\\");
+        returnString = temp[temp.length - 1].split("[.]")[0];
+        return returnString;
     }
 }

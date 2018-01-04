@@ -33,7 +33,7 @@ public class HuffManTest extends HuffMan {
         }
         Node rootNode = nodeList.get(0);
         Node test = rootNode;
-       // System.out.println("以下是前序:");
+        // System.out.println("以下是前序:");
         //testShowTree(test);
         return rootNode;
     }

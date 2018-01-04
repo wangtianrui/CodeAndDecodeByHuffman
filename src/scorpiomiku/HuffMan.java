@@ -12,6 +12,7 @@ public abstract class HuffMan implements HuffManMainWays {
 
     //把字符串转换为Node的一个线性结构
     protected abstract ArrayList<Node> string2NodeList(String string);
+
     //两个重载方法，第一个为当只有一个节点的情况就直接编码为0后return,第二个则是左子加0右子加1
     private Map<Character, String> getCodeMap(Node rootNode) {
         Map<Character, String> codesMap = new HashMap<Character, String>();
@@ -36,6 +37,7 @@ public abstract class HuffMan implements HuffManMainWays {
             getCodeMap(rootNode.getRightChild(), suffix + "1", codesMap);
         }
     }
+
     //编码
     @Override
     public MapOfEncode encode(String string) {
@@ -55,6 +57,7 @@ public abstract class HuffMan implements HuffManMainWays {
         MapOfEncode result = new MapOfEncode(encode.toString(), codeMap);
         return result;
     }
+
     //解码
     @Override
     public String decode(MapOfEncode mapOfEncode) {
@@ -77,6 +80,7 @@ public abstract class HuffMan implements HuffManMainWays {
         }
         return decodeStr.toString();
     }
+
     //得到解码的Map
     private Map<String, Character> getDecodeMap(Map<Character, String> codeMap) {
         Map<String, Character> decodeMap = new HashMap<>();
