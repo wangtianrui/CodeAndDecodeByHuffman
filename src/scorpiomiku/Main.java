@@ -8,7 +8,7 @@ public class Main {
 
         HuffManTest huffManTest = new HuffManTest();
         String readString = IOTools.getTxt("E:\\javaprogrames\\CodeAndDecodeByHuffman\\ReadTxt.txt");
-        MapOfEncode mapOfEncode = huffManTest.encode(readString);
+        CodeAndMap mapOfEncode = huffManTest.encode(readString);
         System.out.println(mapOfEncode.getEncodeString());
 
         IOTools.writeCodeToDat(mapOfEncode.getEncodeString(),"E:\\javaprogrames\\CodeAndDecodeByHuffman\\Code.dat");

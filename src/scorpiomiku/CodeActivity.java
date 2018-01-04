@@ -4,18 +4,27 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import javax.swing.*;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class CodeActivity {
 
     private FilePath mFilePath;
+    private HuffManTest huffManTest = new HuffManTest();
+    private CodeAndMap codeAndMap;
+
+    private Stage result_layout = new Stage();
+    private Text resultText ;
+
     private Stage main_layout = new Stage();
     private Button startButton = new Button("开始");
     private Button firstFileButton = new Button("...");
@@ -61,18 +70,32 @@ public class CodeActivity {
             //文字
             this.firstFileText = new Text("请选择要编码的文件");
             this.secondFileText = new Text("请选择输出目录");
+
+
             //开始按钮点击事件
             startButton.setOnAction(event -> {
                 //IOTools.getFileName(firstTextField.getText().toString())
                 String inputFileName = firstTextField.getText().toString();
-                String outputCodeFileName = secondTextField.getText().toString()
+                String outputCodeFileName = secondTextField.getText().toString() + "\\\\"
                         + IOTools.getFileName(firstTextField.getText().toString()) + ".dat";
-                String outputMapFileName = secondTextField.getText().toString()
+                String outputMapFileName = secondTextField.getText().toString() + "\\\\"
                         + IOTools.getFileName(firstTextField.getText().toString()) + "Map.txt";
+                String readTxt = "";
                 mFilePath = new FilePath(inputFileName, outputCodeFileName, outputMapFileName);
                 //System.out.println(inputFileName + outputCodeFileName);
+                try {
+                    readTxt = IOTools.getTxt(mFilePath.getInputTxtFileName());
+                    codeAndMap = huffManTest.encode(readTxt);
+                    IOTools.writeCodeToDat(codeAndMap.getEncodeString(), mFilePath.getOutputCodeFileName());
+                    IOTools.writeMap(codeAndMap.getEncodeMap(), mFilePath.getOutputMapFileName());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                System.out.println(mFilePath.getOutputMapFileName());
                 JOptionPane.showMessageDialog(null, "OK", "编码成功", JOptionPane.ERROR_MESSAGE);
             });
+
+
             //浏览文件夹的按钮
             firstFileButton.setOnAction(event -> {
                 JFileChooser fileChooser = new JFileChooser();
@@ -86,11 +109,25 @@ public class CodeActivity {
             //selection==1时为decode界面
             //设置文字
             this.firstFileText = new Text("请选择要解码的文件");
-            this.secondFileText = new Text("请选择输出目录");
+            this.secondFileText = new Text("请选择对应的Map文件");
 
             //start按钮
             startButton.setOnAction(event -> {
-                System.out.println("解码");
+                String inputFileName = firstTextField.getText().toString();
+                String inputMapFileName = secondTextField.getText().toString();
+                try {
+                    CodeAndMap codeAndMap = new CodeAndMap(IOTools.readCodeFromDat(inputFileName)
+                            , IOTools.getMapFromTxt(inputMapFileName));
+                    String decode = huffManTest.decode(codeAndMap);
+                    resultText = new Text(decode);
+                    Pane pane = new FlowPane();
+                    pane.getChildren().addAll(resultText);
+                    Scene scene1 = new Scene( pane,620, 400);
+                    result_layout.setScene(scene1);
+                    result_layout.show();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
             });
 
             //文件浏览按钮

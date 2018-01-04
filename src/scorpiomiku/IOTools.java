@@ -22,7 +22,7 @@ public class IOTools {
         return returnString;
     }
 
-    public static void writeMap(String fileName, Map<Character, String> codeMap) throws IOException {
+    public static void writeMap( Map<Character, String> codeMap,String fileName) throws IOException {
 
         FileWriter fw = new FileWriter(fileName);
         Set<Character> keys = codeMap.keySet();

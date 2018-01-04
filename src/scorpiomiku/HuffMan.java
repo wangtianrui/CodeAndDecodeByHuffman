@@ -40,27 +40,27 @@ public abstract class HuffMan implements HuffManMainWays {
 
     //编码
     @Override
-    public MapOfEncode encode(String string) {
+    public CodeAndMap encode(String string) {
         ArrayList<Node> nodeArrayList = string2NodeList(string);
         Node rootNode = createTree(nodeArrayList);
         Map<Character, String> codeMap = getCodeMap(rootNode);
-        MapOfEncode mapOfEncode = encode(codeMap, string);
+        CodeAndMap mapOfEncode = encode(codeMap, string);
         return mapOfEncode;
     }
 
-    private MapOfEncode encode(Map<Character, String> codeMap, String string) {
+    private CodeAndMap encode(Map<Character, String> codeMap, String string) {
         StringBuilder encode = new StringBuilder();
         for (int i = 0, length = string.length(); i < length; i++) {
             Character character = string.charAt(i);
             encode.append(codeMap.get(character));
         }
-        MapOfEncode result = new MapOfEncode(encode.toString(), codeMap);
+        CodeAndMap result = new CodeAndMap(encode.toString(), codeMap);
         return result;
     }
 
     //解码
     @Override
-    public String decode(MapOfEncode mapOfEncode) {
+    public String decode(CodeAndMap mapOfEncode) {
         StringBuffer decodeStr = new StringBuffer();
         Map<String, Character> decodeMap = getDecodeMap(mapOfEncode.getEncodeMap());
         Set<String> keys = decodeMap.keySet();

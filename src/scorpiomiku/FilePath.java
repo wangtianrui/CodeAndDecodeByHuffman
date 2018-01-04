@@ -5,6 +5,41 @@ public class FilePath {
     private String outputCodeFileName = null;
     private String outputMapFileName = null;
 
+
+    public FilePath(String inputCodeFileName, String inputMapFileName) {
+        this.inputCodeFileName = inputCodeFileName;
+        this.inputMapFileName = inputMapFileName;
+    }
+
+    //private String outputTxtFileName = null ;
+    private String inputCodeFileName = null ;
+    private String inputMapFileName = null ;
+    private String outPutFileName = null ;
+
+    public String getInputCodeFileName() {
+        return inputCodeFileName;
+    }
+
+    public void setInputCodeFileName(String inputCodeFileName) {
+        this.inputCodeFileName = inputCodeFileName;
+    }
+
+    public String getInputMapFileName() {
+        return inputMapFileName;
+    }
+
+    public void setInputMapFileName(String inputMapFileName) {
+        this.inputMapFileName = inputMapFileName;
+    }
+
+    public String getOutPutFileName() {
+        return outPutFileName;
+    }
+
+    public void setOutPutFileName(String outPutFileName) {
+        this.outPutFileName = outPutFileName;
+    }
+
     public String getInputTxtFileName() {
         return inputTxtFileName;
     }
@@ -34,4 +69,5 @@ public class FilePath {
         this.outputCodeFileName = outputCodeFileName;
         this.outputMapFileName = outputMapFileName;
     }
+
 }
