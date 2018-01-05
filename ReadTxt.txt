@@ -36,13 +36,12 @@
   }
   ```
 
-* ##### HuffManÊ÷
+* ##### HuffMan
 
   ![Alttext](https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=5adc683524dda3cc1fe9b07260805264/5366d0160924ab1886c1109d3ffae6cd7a890b40.jpg)
 
   ```txt
-  ¸ø¶¨n¸öÈ¨Öµ×÷Îªn¸öÒ¶×Ó½áµã£¬¹¹ÔìÒ»¿Ã¶þ²æÊ÷£¬Èô´øÈ¨Â·¾¶³¤¶È´ïµ½×îÐ¡£¬³ÆÕâÑùµÄ¶þ²æÊ÷Îª×îÓÅ¶þ²æÊ÷£¬Ò²³ÆÎª
-  ¹þ·òÂüÊ÷(Huffman Tree)¡£¹þ·òÂüÊ÷ÊÇ´øÈ¨Â·¾¶³¤¶È×î¶ÌµÄÊ÷£¬È¨Öµ½Ï´óµÄ½áµãÀë¸ù½Ï½ü
+  ¸ø¶¨n¸öÈ¨Öµ×÷Îªn¸öÒ¶×Ó½áµã£¬¹¹ÔìÒ»¿Ã¶þ²æÊ÷£¬Èô´øÈ¨Â·¾¶³¤¶È´ïµ½×îÐ¡£¬³ÆÕâÑùµÄ¶þ²æÊ÷Îª×îÓÅ¶þ²æÊ÷£¬Ò²³ÆÎª¹þ·òÂüÊ÷(Huffman Tree)¡£¹þ·òÂüÊ÷ÊÇ´øÈ¨Â·¾¶³¤¶È×î¶ÌµÄÊ÷£¬È¨Öµ½Ï´óµÄ½áµãÀë¸ù½Ï½ü
   ```
   * ###### ¹þ·òÂüÊ÷µÄ¹¹Ôì
 
@@ -74,16 +73,15 @@
      }
     ```
 
+    * ###### HuffMan±àÂë
+
+    ```txt
+    ´Ó¸ù½Úµã¿ªÊ¼£¬×ó×Ó¼Ó0£¬ÓÒ×Ó¼Ó1£¬×îÖÕµÃµ½Ã¿¸ö¸ù½ÚµãµÄhuffman±àÂë
+    ```
+
 ### Èý¡¢HuffMan±àÂëµÄºÃ´¦
 ```txt
-Huffman±àÂë´¦ÀíµÄÊÇ×Ö·ûÒÔ¼°×Ö·û¶ÔÓ¦µÄ¶þ½øÖÆµÄ±àÂëÅä¶ÔÎÊÌâ£¬·ÖÎª±àÂëºÍ½âÂë£¬Ä¿µÄÊÇÑ¹×Ö·û¶ÔÓ¦µÄ¶þ½øÖÆÊý¾Ý³¤¶È¡£
-ÎÒÃÇÖªµÀ×Ö·û´æÖüºÍ´«ÊäµÄÊ±ºò¶¼ÊÇ¶þ½øÖÆµÄ(¼ÆËã»úÖ»ÈÏÊ¶0/1)£¬ÄÇÃ´¾ÍÓÐ×Ö·ûÓë¶þ½øÖÆÖ®¼äµÄmapping¹ØÏµ¡£×Ö·ûÊôÓÚ
-×Ö·û¼¯(Charset), ×Ö·ûÐèÒªÍ¨¹ý±àÂë(encode)Îª¶þ½øÖÆ½øÐÐ´æÖüºÍ´«Êä£¬ÏÔÊ¾µÄÊ±ºòÐèÒª½âÂë(decode)»Ø×Ö·û£¬×Ö·û¼¯
-Óë±àÂë·½·¨ÊÇÒ»¶Ô¶à¹ØÏµ(Unicode¿ÉÒÔÓÃUTF-8,UTF-16µÈ±àÂë)¡£Àí½âÁË×Ö·û¼¯£¬±àÂëÒÔ¼°½âÂë£¬ÂúÌì·ÉµÄÂÒÂëÎÊÌâÒ²¾Í
-ÓÎÈÐ¶ø½âÁË¡£ÒÔÓ¢ÎÄ×ÖÄ¸Ð¡Ð´aÎªÀý, ASCII±àÂëÖÐ£¬Ê®½øÖÆÎª97£¬¶þ½øÖÆÎª01100001¡£ASCIIµÄÃ¿Ò»¸ö×Ö·û¶¼ÓÃ8¸öBit(1
-Byte)±àÂë£¬¼ÙÈçÓÐ1000¸ö×Ö·ûÒª´«Êä£¬ÄÇÃ´¾ÍÒª´«Êä8000¸öBit¡£ÎÊÌâÀ´ÁË£¬Ó¢ÎÄÖÐ×ÖÄ¸eµÄÊ¹ÓÃÆµÂÊÎª12.702%£¬¶øzÎª
-0.074%£¬Ç°ÕßÊÇºóÕßµÄ100¶à±¶£¬µ«ÊÇÈ·Ê¹ÓÃÏàÍ¬Î»ÊýµÄ¶þ½øÖÆ¡£¿ÉÒÔ×öµÃ¸üºÃ£¬·½·¨¾ÍÊÇ¿É±ä³¤¶È±àÂë£¬Ö¸µ¼Ô­Ôò¾ÍÊÇÆµ
-ÂÊ¸ßµÄÓÃ½Ï¶ÌµÄÎ»Êý±àÂë£¬ÆµÂÊµÍµÄÓÃ½Ï³¤Î»Êý±àÂë¡£Huffman±àÂëËã·¨¾ÍÊÇ´¦ÀíÕâÑùµÄÎÊÌâ¡£
+Huffman±àÂë´¦ÀíµÄÊÇ×Ö·ûÒÔ¼°×Ö·û¶ÔÓ¦µÄ¶þ½øÖÆµÄ±àÂëÅä¶ÔÎÊÌâ£¬·ÖÎª±àÂëºÍ½âÂë£¬Ä¿µÄÊÇÑ¹×Ö·û¶ÔÓ¦µÄ¶þ½øÖÆÊý¾Ý³¤¶È¡£ÎÒÃÇÖªµÀ×Ö·û´æÖüºÍ´«ÊäµÄÊ±ºò¶¼ÊÇ¶þ½øÖÆµÄ(¼ÆËã»úÖ»ÈÏÊ¶0/1)£¬ÄÇÃ´¾ÍÓÐ×Ö·ûÓë¶þ½øÖÆÖ®¼äµÄmapping¹ØÏµ¡£×Ö·ûÊôÓÚ×Ö·û¼¯(Charset), ×Ö·ûÐèÒªÍ¨¹ý±àÂë(encode)Îª¶þ½øÖÆ½øÐÐ´æÖüºÍ´«Êä£¬ÏÔÊ¾µÄÊ±ºòÐèÒª½âÂë(decode)»Ø×Ö·û£¬×Ö·û¼¯Óë±àÂë·½·¨ÊÇÒ»¶Ô¶à¹ØÏµ(Unicode¿ÉÒÔÓÃUTF-8,UTF-16µÈ±àÂë)¡£Àí½âÁË×Ö·û¼¯£¬±àÂëÒÔ¼°½âÂë£¬ÂúÌì·ÉµÄÂÒÂëÎÊÌâÒ²¾ÍÓÎÈÐ¶ø½âÁË¡£ÒÔÓ¢ÎÄ×ÖÄ¸Ð¡Ð´aÎªÀý, ASCII±àÂëÖÐ£¬Ê®½øÖÆÎª97£¬¶þ½øÖÆÎª01100001¡£ASCIIµÄÃ¿Ò»¸ö×Ö·û¶¼ÓÃ8¸öBit(1Byte)±àÂë£¬¼ÙÈçÓÐ1000¸ö×Ö·ûÒª´«Êä£¬ÄÇÃ´¾ÍÒª´«Êä8000¸öBit¡£ÎÊÌâÀ´ÁË£¬Ó¢ÎÄÖÐ×ÖÄ¸eµÄÊ¹ÓÃÆµÂÊÎª12.702%£¬¶øzÎª0.074%£¬Ç°ÕßÊÇºóÕßµÄ100¶à±¶£¬µ«ÊÇÈ·Ê¹ÓÃÏàÍ¬Î»ÊýµÄ¶þ½øÖÆ¡£¿ÉÒÔ×öµÃ¸üºÃ£¬·½·¨¾ÍÊÇ¿É±ä³¤¶È±àÂë£¬Ö¸µ¼Ô­Ôò¾ÍÊÇÆµÂÊ¸ßµÄÓÃ½Ï¶ÌµÄÎ»Êý±àÂë£¬ÆµÂÊµÍµÄÓÃ½Ï³¤Î»Êý±àÂë¡£Huffman±àÂëËã·¨¾ÍÊÇ´¦ÀíÕâÑùµÄÎÊÌâ¡£
 ```
 
 ### ËÄ¡¢ÊµÑéÄ¿±ê
@@ -94,14 +92,18 @@ Byte)±àÂë£¬¼ÙÈçÓÐ1000¸ö×Ö·ûÒª´«Êä£¬ÄÇÃ´¾ÍÒª´«Êä8000¸öBit¡£ÎÊÌâÀ´ÁË£¬Ó¢ÎÄÖÐ×ÖÄ¸eµ
 
 > ###### ÓïÑÔ£ºËùÓÐ´úÂëÊ¹ÓÃjavaÓïÑÔ£¬Ê¹ÓÃµÄ±àÒëÆ÷ÓÐIntellij IDEA ¡¢ Android Studio ºÍ Atom
 
+> ###### Ô´Âë£º×îÖÕÔ´Âë´ò°üÎªÑ¹Ëõ°ü²¢ÉÏ´«µ½github
+
+githubµØÖ·:https://github.com/wangtianrui/CodeAndDecodeByHuffman
+
 ### Îå¡¢ÊµÑé·Ö¹¤
 
-|  Ãû×Ö  |     Ñ§ºÅ     | ¸ºÔðµÄÄ£¿é | ×éÄÚµ£µ±µÄÎ»ÖÃ |
-| :--: | :--------: | :---: | :-----: |
-| ÍõÌìÈñ  | 1607094155 |  app¿ò¼Ü´î½¨¡¢   |   ×é³¤    |
-| ³ÂÖ¾±ò  | 1607094152 |  ´ý¶¨   |   ×éÔ±    |
-| ºÎµÂÇì  | 1607094153 |  ´ý¶¨   |   ×éÔ±    |
-|  Ö£ºÀ  | 1607094154 |  ´ý¶¨   |   ×éÔ±    |
+|  Ãû×Ö  |     Ñ§ºÅ     |            ¸ºÔðµÄÄ£¿é             | ×éÄÚµ£µ±µÄÎ»ÖÃ |
+| :--: | :--------: | :--------------------------: | :-----: |
+| ÍõÌìÈñ  | 1607094155 | HuffManÊ÷µÄ´î½¨£¨½ÚµãµÄ»ñÈ¡ºÍÁ´½Ó£©¡¢½çÃæµÄ¿ÉÊÓ»¯ |   ×é³¤    |
+| ³ÂÖ¾±ò  | 1607094152 |      ÎÄ¼þ¶ÁÐ´²Ù×÷¡¢´óÖÂÂß¼­ºÍÎÄµµµÄÊéÐ´       |   ×éÔ±    |
+| ºÎµÂÇì  | 1607094153 |     HuffMan±àÂëÀà´î½¨encode·½Ãæ     |   ×éÔ±    |
+|  Ö£ºÀ  | 1607094154 |     HuffMan±àÂëÀà´î½¨decode·½Ãæ     |   ×éÔ±    |
 
 ### Áù¡¢Ê±¼ä°²ÅÅ
 

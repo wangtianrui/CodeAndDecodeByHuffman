@@ -1,10 +1,12 @@
 package scorpiomiku;
 
+import java.io.Serializable;
 import java.util.Map;
+
 /*
 * 用来存放解码用的MAP，和码
 */
-public class CodeAndMap {
+public class CodeAndMap implements Serializable {
     private String encodeString;
     private Map<Character, String> encodeMap;
 

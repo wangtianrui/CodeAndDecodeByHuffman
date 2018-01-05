@@ -23,7 +23,7 @@ public class CodeActivity {
     private CodeAndMap codeAndMap;
 
     private Stage result_layout = new Stage();
-    private Text resultText ;
+    private Text resultText;
 
     private Stage main_layout = new Stage();
     private Button startButton = new Button("开始");
@@ -40,20 +40,6 @@ public class CodeActivity {
     CodeActivity(int selection, Stage begin) throws IOException {
 
 
-        secondFileButton.setOnAction(event -> {
-            //JFileChooser可以用来浏览文件夹
-            JFileChooser fileChooser = new JFileChooser();
-            //只能选择一个
-            fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-            int flag = fileChooser.showOpenDialog(fileChooser);
-            if (flag == JFileChooser.APPROVE_OPTION) {
-                File file = fileChooser.getSelectedFile();
-                //getAbsolutePath()返回的是user.dir+getPath()的内容,如：D:\\test\\test.txt
-                secondTextField.setText(file.getAbsolutePath());
-            }
-        });
-
-
         exitButton.setOnAction(event -> {
             main_layout.close();
             begin.close();
@@ -66,6 +52,19 @@ public class CodeActivity {
 
 
         if (selection == 2) {
+            //浏览文件的第二个按钮
+            secondFileButton.setOnAction(event -> {
+                //JFileChooser可以用来浏览文件夹
+                JFileChooser fileChooser = new JFileChooser();
+                //只能选择一个
+                fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+                int flag = fileChooser.showOpenDialog(fileChooser);
+                if (flag == JFileChooser.APPROVE_OPTION) {
+                    File file = fileChooser.getSelectedFile();
+                    //getAbsolutePath()返回的是user.dir+getPath()的内容,如：D:\\test\\test.txt
+                    secondTextField.setText(file.getAbsolutePath());
+                }
+            });
             //selection==2时为encode界面
             //文字
             this.firstFileText = new Text("请选择要编码的文件");
@@ -79,7 +78,7 @@ public class CodeActivity {
                 String outputCodeFileName = secondTextField.getText().toString() + "\\\\"
                         + IOTools.getFileName(firstTextField.getText().toString()) + ".dat";
                 String outputMapFileName = secondTextField.getText().toString() + "\\\\"
-                        + IOTools.getFileName(firstTextField.getText().toString()) + "Map.txt";
+                        + IOTools.getFileName(firstTextField.getText().toString()) + "Map.dat";
                 String readTxt = "";
                 mFilePath = new FilePath(inputFileName, outputCodeFileName, outputMapFileName);
                 //System.out.println(inputFileName + outputCodeFileName);
@@ -106,6 +105,20 @@ public class CodeActivity {
                 }
             });
         } else if (selection == 1) {
+
+            //浏览文件的第二个按钮
+            secondFileButton.setOnAction(event -> {
+                //JFileChooser可以用来浏览文件夹
+                JFileChooser fileChooser = new JFileChooser();
+                //只能选择一个
+                //fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+                int flag = fileChooser.showOpenDialog(fileChooser);
+                if (flag == JFileChooser.APPROVE_OPTION) {
+                    File file = fileChooser.getSelectedFile();
+                    //getAbsolutePath()返回的是user.dir+getPath()的内容,如：D:\\test\\test.txt
+                    secondTextField.setText(file.getAbsolutePath());
+                }
+            });
             //selection==1时为decode界面
             //设置文字
             this.firstFileText = new Text("请选择要解码的文件");
@@ -122,10 +135,14 @@ public class CodeActivity {
                     resultText = new Text(decode);
                     Pane pane = new FlowPane();
                     pane.getChildren().addAll(resultText);
-                    Scene scene1 = new Scene( pane,620, 400);
+                    Scene scene1 = new Scene(pane, 620, 400);
                     result_layout.setScene(scene1);
                     result_layout.show();
                 } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (ClassNotFoundException e) {
                     e.printStackTrace();
                 }
             });
