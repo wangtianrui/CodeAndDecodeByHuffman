@@ -4,11 +4,8 @@ package scorpiomiku;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -129,7 +126,7 @@ public class CodeActivity {
                 String inputMapFileName = secondTextField.getText().toString();
                 try {
                     CodeAndMap codeAndMap = new CodeAndMap(IOTools.readCodeFromDat(inputFileName)
-                            , IOTools.getMapFromTxt(inputMapFileName));
+                            , IOTools.getMap(inputMapFileName));
                     String decode = huffManTest.decode(codeAndMap);
                     JFrame deCodeShow = new JFrame("HuffMan的编解码");
                     JTextArea decodeText = new JTextArea(decode);

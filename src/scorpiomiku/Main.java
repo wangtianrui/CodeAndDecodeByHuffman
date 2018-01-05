@@ -23,13 +23,13 @@ public class Main {
         System.out.println("code:"+code);
         IOTools.writeMap(mapOfEncode.getEncodeMap(),"E:\\javaprogrames\\CodeAndDecodeByHuffman\\Map.txt");
 
-        CodeAndMap codeAndMap = new CodeAndMap(code,IOTools.getMapFromTxt("E:\\javaprogrames\\CodeAndDecodeByHuffman\\Map.txt"));
+        CodeAndMap codeAndMap = new CodeAndMap(code,IOTools.getMap("E:\\javaprogrames\\CodeAndDecodeByHuffman\\Map.txt"));
         String deCode = huffManTest.decode(codeAndMap);
         System.out.println("decode:"+deCode);
 
         /*
         String code = IOTools.getCodeFromTxt("E:\\javaprogrames\\CodeAndDecodeByHuffman\\Code.dat");
-        Map<Character, String> map = IOTools.getMapFromTxt("E:\\javaprogrames\\CodeAndDecodeByHuffman\\Map.dat");
+        Map<Character, String> map = IOTools.getMap("E:\\javaprogrames\\CodeAndDecodeByHuffman\\Map.dat");
         */
         //System.out.println("完成");
         //IOTools.getJPG("E:\\javaprogrames\\CodeAndDecodeByHuffman\\testdog.jpg");

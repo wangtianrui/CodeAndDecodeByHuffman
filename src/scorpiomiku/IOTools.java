@@ -41,7 +41,7 @@ public class IOTools {
         fos.close();
     };
 
-    public static Map<Character, String> getMapFromTxt(String fileName) throws IOException, ClassNotFoundException {
+    public static Map<Character, String> getMap(String fileName) throws IOException, ClassNotFoundException {
         Map<Character, String> returnMap = new HashMap<>();
         FileInputStream fis = new FileInputStream(fileName);
         ObjectInputStream ois = new ObjectInputStream(fis);
