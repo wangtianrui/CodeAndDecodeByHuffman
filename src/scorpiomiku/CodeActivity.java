@@ -128,14 +128,14 @@ public class CodeActivity {
                     CodeAndMap codeAndMap = new CodeAndMap(IOTools.readCodeFromDat(inputFileName)
                             , IOTools.getMap(inputMapFileName));
                     String decode = huffManTest.decode(codeAndMap);
-                    JFrame deCodeShow = new JFrame("HuffMan的编解码");
+                    JFrame deCodeShow = new JFrame("解码的结果");
                     JTextArea decodeText = new JTextArea(decode);
                     JScrollPane decodeScroll = new JScrollPane(decodeText);
                     decodeScroll.setBounds(13, 10, 350, 340);
                     decodeScroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
                     deCodeShow.add(decodeScroll);
 
-                    JFrame mapShow = new JFrame("HuffMan的编解码");
+                    JFrame mapShow = new JFrame("各个字符所对应的编码");
                     JTextArea mapText = new JTextArea(codeAndMap.mapToString());
                     JScrollPane mapScroll = new JScrollPane(mapText);
                     mapScroll.setBounds(13, 10, 350, 340);
