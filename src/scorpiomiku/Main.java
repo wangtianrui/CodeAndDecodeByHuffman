@@ -6,6 +6,11 @@ public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
 
+        /**
+         * 此为测试类
+         * 请从MainActivity运行
+         */
+        /*
         HuffManTest huffManTest = new HuffManTest();
         String readString = IOTools.getTxt("E:\\javaprogrames\\CodeAndDecodeByHuffman\\ReadTxt.txt");
         CodeAndMap mapOfEncode = huffManTest.encode(readString);

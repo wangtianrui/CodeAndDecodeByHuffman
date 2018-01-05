@@ -90,7 +90,7 @@ public class CodeActivity {
                     e.printStackTrace();
                 }
                 System.out.println(mFilePath.getOutputMapFileName());
-                JOptionPane.showMessageDialog(null, "OK", "编码成功", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "OK", "编码成功", JOptionPane.PLAIN_MESSAGE);
             });
 
 

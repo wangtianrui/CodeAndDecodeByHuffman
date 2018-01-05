@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f3db58f-bdce-468a-8732-ef04fe15d485" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeAndDecodeByHuffman/scorpiomiku/main.class" afterPath="$PROJECT_DIR$/out/production/CodeAndDecodeByHuffman/scorpiomiku/main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scorpiomiku/CodeActivity.java" afterPath="$PROJECT_DIR$/src/scorpiomiku/CodeActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scorpiomiku/CodeAndMap.java" afterPath="$PROJECT_DIR$/src/scorpiomiku/CodeAndMap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scorpiomiku/Main.java" afterPath="$PROJECT_DIR$/src/scorpiomiku/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,8 +58,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scorpiomiku/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="20" column="39" lean-forward="true" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+            <state relative-caret-position="297">
+              <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -79,8 +80,8 @@
       <file leaf-file-name="CodeActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scorpiomiku/CodeActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="154" column="22" lean-forward="false" selection-start-line="154" selection-start-column="22" selection-end-line="154" selection-end-column="22" />
+            <state relative-caret-position="200">
+              <caret line="92" column="91" lean-forward="false" selection-start-line="92" selection-start-column="91" selection-end-line="92" selection-end-column="91" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1357#1436#0" expanded="false" />
@@ -201,9 +202,9 @@
         <option value="$PROJECT_DIR$/src/scorpiomiku/HuffMan.java" />
         <option value="$PROJECT_DIR$/src/scorpiomiku/FilePath.java" />
         <option value="$PROJECT_DIR$/src/scorpiomiku/MyMap.java" />
-        <option value="$PROJECT_DIR$/src/scorpiomiku/Main.java" />
         <option value="$PROJECT_DIR$/src/scorpiomiku/IOTools.java" />
         <option value="$PROJECT_DIR$/src/scorpiomiku/CodeAndMap.java" />
+        <option value="$PROJECT_DIR$/src/scorpiomiku/Main.java" />
         <option value="$PROJECT_DIR$/src/scorpiomiku/CodeActivity.java" />
       </list>
     </option>
@@ -722,14 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scorpiomiku/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="20" column="39" lean-forward="true" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scorpiomiku/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
@@ -781,10 +774,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/scorpiomiku/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/scorpiomiku/CodeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="154" column="22" lean-forward="false" selection-start-line="154" selection-start-column="22" selection-end-line="154" selection-end-column="22" />
+        <state relative-caret-position="200">
+          <caret line="92" column="91" lean-forward="false" selection-start-line="92" selection-start-column="91" selection-end-line="92" selection-end-column="91" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1357#1436#0" expanded="false" />
