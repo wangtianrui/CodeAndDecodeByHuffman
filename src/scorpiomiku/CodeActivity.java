@@ -1,8 +1,10 @@
 package scorpiomiku;
 
+
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
@@ -21,9 +23,6 @@ public class CodeActivity {
     private FilePath mFilePath;
     private HuffManTest huffManTest = new HuffManTest();
     private CodeAndMap codeAndMap;
-
-    private Stage result_layout = new Stage();
-    private Text resultText;
 
     private Stage main_layout = new Stage();
     private Button startButton = new Button("开始");
@@ -132,12 +131,28 @@ public class CodeActivity {
                     CodeAndMap codeAndMap = new CodeAndMap(IOTools.readCodeFromDat(inputFileName)
                             , IOTools.getMapFromTxt(inputMapFileName));
                     String decode = huffManTest.decode(codeAndMap);
-                    resultText = new Text(decode);
-                    Pane pane = new FlowPane();
-                    pane.getChildren().addAll(resultText);
-                    Scene scene1 = new Scene(pane, 620, 400);
-                    result_layout.setScene(scene1);
-                    result_layout.show();
+                    JFrame deCodeShow = new JFrame("HuffMan的编解码");
+                    JTextArea decodeText = new JTextArea(decode);
+                    JScrollPane decodeScroll = new JScrollPane(decodeText);
+                    decodeScroll.setBounds(13, 10, 350, 340);
+                    decodeScroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+                    deCodeShow.add(decodeScroll);
+
+                    JFrame mapShow = new JFrame("HuffMan的编解码");
+                    JTextArea mapText = new JTextArea(codeAndMap.mapToString());
+                    JScrollPane mapScroll = new JScrollPane(mapText);
+                    mapScroll.setBounds(13, 10, 350, 340);
+                    mapScroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+                    mapShow.add(mapScroll);
+
+                    mapShow.setSize(600,400);
+                    mapShow.setLocation(900,100);
+                    mapShow.setVisible(true);
+
+                    deCodeShow.setSize(600, 400);
+                    deCodeShow.setLocation(100, 100);
+                    deCodeShow.setVisible(true);
+                    //deCodeShow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 } catch (IOException e) {
