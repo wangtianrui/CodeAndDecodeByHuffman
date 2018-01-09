@@ -8,6 +8,11 @@ import java.util.Map;
 import java.util.Set;
 
 public class IOTools {
+    public static void writeTxt(String decode, String fileName) throws IOException {
+        FileOutputStream fos = new FileOutputStream(fileName);
+        fos.write(decode.getBytes());
+        fos.close();
+    }
 
     public static String getTxt(String fileName) throws IOException {
         FileInputStream fis = new FileInputStream(fileName);
@@ -39,13 +44,15 @@ public class IOTools {
         oos.flush();
         oos.close();
         fos.close();
-    };
+    }
+
+    ;
 
     public static Map<Character, String> getMap(String fileName) throws IOException, ClassNotFoundException {
         Map<Character, String> returnMap = new HashMap<>();
         FileInputStream fis = new FileInputStream(fileName);
         ObjectInputStream ois = new ObjectInputStream(fis);
-        returnMap=(Map<Character,String>)ois.readObject();
+        returnMap = (Map<Character, String>) ois.readObject();
         ois.close();
         fis.close();
         return returnMap;
