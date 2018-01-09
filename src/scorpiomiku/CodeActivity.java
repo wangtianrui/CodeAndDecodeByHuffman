@@ -128,7 +128,7 @@ public class CodeActivity {
                     CodeAndMap codeAndMap = new CodeAndMap(IOTools.readCodeFromDat(inputFileName)
                             , IOTools.getMap(inputMapFileName));
                     String decode = huffManTest.decode(codeAndMap);
-                    IOTools.writeTxt(decode,inputFileName.split("[.]")[0]+"decodeTxt.txt");
+                    IOTools.writeTxt(decode, inputFileName.split("[.]")[0] + "decodeTxt.txt");
                     JFrame deCodeShow = new JFrame("解码的结果");
                     JTextArea decodeText = new JTextArea(decode);
                     JScrollPane decodeScroll = new JScrollPane(decodeText);
@@ -143,8 +143,8 @@ public class CodeActivity {
                     mapScroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
                     mapShow.add(mapScroll);
 
-                    mapShow.setSize(600,400);
-                    mapShow.setLocation(900,100);
+                    mapShow.setSize(600, 400);
+                    mapShow.setLocation(900, 100);
                     mapShow.setVisible(true);
 
                     deCodeShow.setSize(600, 400);

@@ -45,7 +45,7 @@ public class MainActivity extends Application {
                 start.hide();
                 CodeActivity sceneMain = new CodeActivity(1, start);
             } catch (IOException e) {
-
+                e.printStackTrace();
             }
         });
         Button Exit = new Button("退出");
